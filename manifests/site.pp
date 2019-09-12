@@ -3,3 +3,11 @@ node default {
     ensure => file,
   }
 }
+
+node 'puppet-client.asia-southeast1-b.c.studious-stack-251705.internal' {
+  file {'testingone':
+    ensure  => file,
+    path    => "/etc/testingone.txt",
+    content => "this is an automatic file yay!",
+  }
+}
